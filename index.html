@@ -1,0 +1,18 @@
+<!doctype html>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<style>
+  body{margin:0;height:100vh;display:flex;flex-direction:column;
+       align-items:center;justify-content:center;
+       font-family:system-ui,sans-serif;background:#111;color:#fff}
+  #loc{font-size:22vw;font-weight:800;letter-spacing:.05em}
+  #sub{font-size:1.1rem;opacity:.55;margin-top:1rem}
+</style>
+<div id=loc>—</div>
+<div id=sub>Location confirmed</div>
+<script>
+  const v = decodeURIComponent(location.hash.slice(1)).replace(/\+/g," ");
+  if (v) document.getElementById('loc').textContent = v;
+  else { document.getElementById('loc').textContent = "?";
+         document.getElementById('sub').textContent = "No tag data"; }
+</script>
+</script>
